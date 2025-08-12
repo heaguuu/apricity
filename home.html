@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>아쿠아 로그 - 홈</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .emoji-container {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .emoji-container img {
+      width: 120px;
+      height: auto;
+    }
+    .status-label {
+      font-size: 1.5rem;
+      margin-top: 10px;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body class="screen">
+  <main class="status-section">
+    <div class="emoji-container">
+      <img id="emojiImage" src="good.png" alt="상태 이모지" />
+    <div class="status-label" id="statusLabel">상태: 좋음</div>
+
+  </div>
+    <p class="status-bar-label">수질 오염도</p>
+    <div class="status-bar">
+      <div class="status-fill" style="width: 24%;"></div>
+    </div>
+    <a href="aiAna.html">
+      <button class="analyze-btn" >AI 분석하기</button>
+    </a>
+
+    <div class="water-data">
+      <div class="data-card">수온<br><strong>17°C</strong></div>
+      <div class="data-card">pH<br><strong>6.8</strong></div>
+      <div class="data-card">전도도<br><strong>524</strong></div>
+    </div>
+  </main>
+
+    <script>
+    function updateStatus(status) {
+      const emojiMap = {
+        good: {
+          src: "good.png",
+          label: "상태: 좋음",
+        },
+        warning: {
+          src: "warning.png",
+          label: "상태: 주의",
+        },
+        bad: {
+          src: "bad.png",
+          label: "상태: 최악",
+        }
+      };
+
+      const emojiImg = document.getElementById("emojiImage");
+      const statusLabel = document.getElementById("statusLabel");
+
+      if (emojiMap[status]) {
+        emojiImg.src = emojiMap[status].src;
+        statusLabel.textContent = emojiMap[status].label;
+      } else {
+        emojiImg.src = "emoji-warning.png";
+        statusLabel.textContent = "상태: 알 수 없음";
+      }
+    }
+    updateStatus("bad");  // 일단 표정 바뀌는 건 확인됨
+  </script>
+
+  <footer>
+  <nav>
+    <ul style="display: flex; justify-content: space-around; list-style: none; padding: 10px 0; margin: 0; border-top: 1px solid #ccc;">
+      <li><a href="home.html">홈화면</a></li>
+      <li><a href="mor.html">모니터링</a></li>
+      <li><a href="setting.html">설정</a></li>
+    </ul>
+  </nav>
+</footer>

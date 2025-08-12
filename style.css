@@ -1,0 +1,601 @@
+/*인트로*/
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.fade-out {
+  animation: fadeOut 1s ease-out forwards;
+}
+
+/* 로그인 */
+
+:root {
+  --main-blue: #6084DE;
+  --light-gray: #C7C7C7;
+  --dark-gray: #808080;
+  --deep-gray: #252525;
+  --alert-red: #EF7272;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: white;
+}
+
+.intro-screen {
+  background-color: var(--main-blue);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.center-box {
+  text-align: center;
+}
+
+.center-box h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.center-box p {
+  margin-bottom: 2rem;
+}
+
+.center-box button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background: white;
+  color: var(--main-blue);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #F5F7FB;
+}
+
+.login-container {
+  background: white;
+  padding: 40px;
+  width: 320px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  border-radius: 16px;
+  text-align: center;
+}
+
+.login-container h2 {
+  color: var(--main-blue);
+  margin-bottom: 24px;
+}
+
+.login-container input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 14px;
+  border: 1px solid #c7c7c7;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--main-blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.links {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--dark-gray);
+}
+
+#loginStatus {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--alert-red);
+}
+
+/* 회원가입 */
+
+body.signup-screen {
+  background-color: #f7f9fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.form-box {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #6084DE;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+input:focus {
+  border-color: #6084DE;
+  outline: none;
+}
+
+.error-message {
+  font-size: 0.8rem;
+  color: #EF7272;
+  height: 1em;
+  margin: 4px 0;
+}
+
+.primary-button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #6084DE;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  background-color: #4f6cc3;
+}
+
+.link-box {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+}
+
+.link-box a {
+  text-decoration: none;
+  color: var(--dark-gray);
+  text-align: center;
+}
+
+/* 홈화면 */
+:root {
+  --main-blue: #5b85e6;
+  --main-black: #1a1a1a;
+  --soft-gray: #f2f2f2;
+  --light-gray: #e0e0e0;
+  --text-gray: #666;
+  --green-bar: #a6e88c;
+  --emoji-size: 120px;
+  --card-radius: 12px;
+  --font-bold: 700;
+}
+
+body.screen {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: white;
+  color: var(--main-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.screen {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.status-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px 100px;
+  text-align: center;
+}
+
+.status-section h1 {
+  font-size: 1.4rem;
+  font-weight: var(--font-bold);
+  margin-bottom: 24px;
+}
+
+.analyze-btn {
+  background-color: #000;
+  color: white;
+  font-weight: var(--font-bold);
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 36px;
+  cursor: pointer;
+}
+
+.status-emoji {
+  width: var(--emoji-size);
+  height: var(--emoji-size);
+  background-color: var(--main-blue);
+  border-radius: 50%;
+  font-size: 60px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.status-section h2 {
+  font-size: 1.6rem;
+  font-weight: var(--font-bold);
+  margin-bottom: 16px;
+}
+
+/* 수질 오염도 표시 */
+.status-bar-label {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  margin-bottom: 6px;
+}
+
+.status-bar {
+  width: 40%;
+  max-width: 280px;
+  height: 30px;
+  background-color: var(--light-gray);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.status-fill {
+  height: 100%;
+  background-color: var(--green-bar);
+  transition: width 0.4s ease;
+}
+
+.status-bar::after {
+  content: "24%";
+  position: absolute;
+  right: 0;
+  top: -20px;
+  font-size: 0.85rem;
+  color: var(--text-gray);
+}
+
+/* 분석하기 버튼 */
+.analyze-btn {
+  background-color: #000;
+  color: white;
+  font-weight: var(--font-bold);
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 36px;
+  cursor: pointer;
+}
+
+/* 수질 데이터 */
+.water-data {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.data-card {
+  background-color: var(--soft-gray);
+  padding: 12px 16px;
+  border-radius: var(--card-radius);
+  min-width: 80px;
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  text-align: center;
+  flex: 1;
+}
+
+.data-card strong {
+  display: block;
+  font-size: 1.4rem;
+  color: black;
+  margin-top: 4px;
+}
+
+/* 하단 네비게이션 */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #ccc;
+  z-index: 1000;
+}
+
+footer nav a {
+  color: #333;           /* 회색 계열 텍스트 */
+  text-decoration: none; /* 밑줄 제거 */
+  font-weight: 500;
+  font-size: 14px;
+  margin: 35px;
+}
+
+footer nav a:hover {
+  color: #007BFF; /* hover 시 살짝 파랗게 강조 (원하면 빼도 됨) */
+}
+
+
+/* 알림 화면 */
+.alert-screen {
+  background-color: #f9f9f9;
+  padding-bottom: 60px; /* 하단바 공간 확보 */
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: #fff;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.2rem;
+}
+
+.top-bar .back-btn {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.alert-list {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.alert-card {
+  background-color: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.alert-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  gap: 6px;
+}
+
+.alert-header strong {
+  font-size: 1rem;
+}
+
+.alert-header span {
+  font-size: 0.8rem;
+  color: #888;
+  flex-shrink: 0;
+}
+
+.alert-header .close-alert {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #999;
+  cursor: pointer;
+}
+
+.alert-card p {
+  margin: 4px 0 12px;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+.check-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+/* 설정 화면 */
+body .settings-screen {
+  width: 375px;
+  height: 667px;
+  font-size: 16px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  padding: 20px 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: sans-serif;
+  align-items: left;
+}
+
+footer {
+  width: 100%;
+  bottom: 0px;
+  position: absolute;
+}
+
+/* 모니터링 화면 */
+body.monitoring-screen {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+.setting-item select {
+  margin-top: 3px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: #fff;
+  color: #333;
+}
+
+.monitoring-container {
+  padding: 20px;
+}
+
+.analyze-btn {
+  width: 200px;
+  height: 40px;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.metrics .metric {
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+.metrics .metric span {
+  font-size: 14px;
+  color: #555;
+}
+
+/* AI 분석화면 */
+body.ai-screen {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+.ai-container {
+  padding: 20px;
+}
+
+.ai-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.ai-summary {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.ai-section {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+.ai-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.good {
+  color: green;
+}
+
+.warning {
+  color: orange;
+}
+
+.ai-recommendation {
+  background-color: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.reanalyze-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

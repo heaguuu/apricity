@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>알림</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="screen">
+
+  <!-- 상단 헤더 -->
+  <header class="top-bar">
+    <button class="back-btn" onclick="window.history.back()">←</button>
+    <h2>알림</h2>
+  </header>
+
+  <!-- 알림 리스트 -->
+  <main class="alert-list">
+    <section class="alert-card">
+      <div class="alert-header">
+        <strong>수조 오염 경고</strong>
+        <span>오늘 오후 3:24</span>
+      </div>
+      <p>현재 수조 내 수질이 좋지 않습니다.<br><strong>TDS 786ppm</strong></p>
+      <button class="check-btn">확인</button>
+    </section>
+
+    <section class="alert-card">
+      <div class="alert-header">
+        <strong>수조 온도 경고</strong>
+        <span>오늘 오후 2:57</span>
+      </div>
+      <p>현재 수조 내 온도가 높습니다.<br><strong>24℃</strong></p>
+      <button class="check-btn">확인</button>
+    </section>
+
+    <section class="alert-card">
+      <div class="alert-header">
+        <strong>수조 pH 경고</strong>
+        <span>어제 오후 8:03</span>
+      </div>
+      <p>현재 수조 내 산성도가 높습니다.<br><strong>3pH</strong></p>
+      <button class="check-btn">확인</button>
+    </section>
+  </main>
+
+<footer class="bottom-nav">
+  <nav>
+    <ul style="display: flex; justify-content: space-around; list-style: none; padding: 10px 0; margin: 0; border-top: 1px solid #ccc;">
+      <li><a href="home.html">홈화면</a></li>
+      <li><a href="mor.html">모니터링</a></li>
+      <li><a href="setting.html">설정</a></li>
+    </ul>
+  </nav>
+</footer>
+
+</body>
+</html>

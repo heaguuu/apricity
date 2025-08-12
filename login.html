@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>아쿠아 로그 - 로그인</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="login-screen">
+  <div class="login-container">
+    <h2>아쿠아 로그</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="아이디를 입력해주세요." required />
+      <input type="password" id="password" placeholder="비밀번호를 입력해주세요." required />
+      <button type="submit">로그인</button>
+    </form>
+
+    <!-- 링크 영역 -->
+    <div class="links">
+      <a href="signup.html">회원가입</a> | <a href="#">비밀번호 찾기</a>
+    </div>
+
+    <p id="loginStatus"></p>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

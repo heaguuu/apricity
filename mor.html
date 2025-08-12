@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>수조 모니터링</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="screen">
+  <canvas id="myChart" width="150" height=60"></canvas>
+
+<script>
+    var data = {
+        labels: ['1월', '2월', '3월', '4월', '5월'],
+        datasets: [
+     //아무거나 들어감
+        ]
+    };
+
+    var options = {
+        scales: {
+            x: {
+                beginAtZero: true
+            },
+            y: {
+                beginAtZero: true
+            }
+        }
+    };
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: data,
+        options: options
+    });
+</script>
+  <div class="monitoring-container">
+    <a href="aiAna.html">
+      <button class="analyze-btn" >AI 분석하기</button>
+    </a>
+
+
+    <div class="metrics">
+      <div class="metric"><strong>온도</strong><br><span>17°C</span></div>
+      <div class="metric"><strong>용존산소량</strong><br><span>25%</span></div>
+      <div class="metric"><strong>pH</strong><br><span>43%</span></div>
+      <div class="metric"><strong>부유물질</strong><br><span>50%</span></div>
+      <div class="metric"><strong>탁도</strong><br><span>15%</span></div>
+    </div>
+  </div>
+
+<footer>
+  <nav>
+    <ul style="display: flex; justify-content: space-around; list-style: none; padding: 10px 0; margin: 0; border-top: 1px solid #ccc;">
+      <li><a href="home.html">홈화면</a></li>
+      <li><a href="mor.html">모니터링</a></li>
+      <li><a href="setting.html">설정</a></li>
+    </ul>
+  </nav>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI 분석기</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="screen">
+  <div class="ai-container">
+    <h2 class="ai-title">AI 분석 결과</h2>  
+    <p class="ai-summary">현재 수조 상태는 <strong>양호</strong>합니다.</p> <!--변수-->
+
+    <!--변수 써서 값을 어떻게 해야할 거 같음-->
+
+    <div class="ai-section">
+      <div class="ai-item">
+        <span> 온도</span>
+        <strong class="good">적정</strong>  <!--변수-->
+      </div>
+      <div class="ai-item">
+        <span> pH</span>
+        <strong class="good">적정</strong>  <!--변수-->
+      </div>
+      <div class="ai-item">
+        <span> 탁도</span>
+        <strong class="good">적정</strong>  <!--변수-->
+      </div>
+    </div>
+
+    <div class="ai-recommendation">
+       <strong>제안:</strong> 산소 공급기를 가동하고, 정화 필터를 점검하세요.   <!--API-->
+    </div>
+
+    <button class="reanalyze-btn">다시 분석하기</button>
+  </div>
+
+<footer class="bottom-nav">
+  <nav>
+    <ul style="display: flex; justify-content: space-around; list-style: none; padding: 10px 0; margin: 0; border-top: 1px solid #ccc;">
+      <li><a href="home.html">홈화면</a></li>
+      <li><a href="mor.html">모니터링</a></li>
+      <li><a href="setting.html">설정</a></li>
+    </ul>
+  </nav>
+</footer>
+
+</body>
+</html>

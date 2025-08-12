@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>아쿠아 로그</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const body = document.body;
+
+      setTimeout(() => {
+        body.classList.add("fade-out");
+      }, 1500); // 1.5초 기다린 후 페이드아웃 시작
+
+      setTimeout(() => {
+        window.location.href = "login.html";
+      }, 2500); // 1초간 페이드아웃 후 이동
+    });
+  </script>
+</head>
+<body class="intro-screen">
+  <div class="center-box fade-in">
+    <h1>아쿠아 로그</h1>
+    <p>양식장의 수질을 지키는 가장 확실한 방법</p>
+  </div>
+</body>
+</html>
